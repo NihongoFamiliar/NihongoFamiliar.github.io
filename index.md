@@ -1,5 +1,10 @@
-Here you can say lots of fun things about your site.
+---
+layout: page
+title: 
+---
 
-Maybe say a some things about yourself.
+<p>Here you can say lots of fun things about your site.</p>
 
-Or maybe what you plan to blog about.
+<p>Maybe say a some things about yourself.</p>
+
+<p>Or maybe what you plan to blog about.</p>

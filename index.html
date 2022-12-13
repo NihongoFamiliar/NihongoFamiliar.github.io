@@ -16,8 +16,27 @@ layout: default
 
 
 <h2>Latest Insights</h2>
-<ul class="post-preview-list compacted">
+<ul class="post-preview-list compacted minimized">
 {% if site.posts.size > 0 %}
+  {% for post in site.posts limit:6 %}
+    <li class="post-preview">
+      <a href="{{post.permalink}}" title="Press to read {{post.title}}" aria-label="Press to read {{post.title}}">
+        <header class="post-preview-header">
+          {{#if post.hero_src}}
+            <img aria-hidden="true" class="bg-img" src="{{post.hero_src}}" alt="{{post.title}}">
+          {{else}}
+            <img aria-hidden="true" class="bg-img" src="{{hero_src}}" alt="{{post.title}}">
+          {{/if}}
+          <!-- TODO: Tags -->
+        </header>
+        <footer class="post-preview-body">
+          <p class="title">{{post.title}}</p>
+          {{#if post.subtitle}}<p class="description">{{post.subtitle | truncatewords:25}}...</p>{{/if}}
+        </footer>
+      </a>
+    </li>
+  {% endfor %}
+{% else %}
   <li><p>Uh-oh! There are no posts here yet.</p></li>
 {% endif %}
 </ul>

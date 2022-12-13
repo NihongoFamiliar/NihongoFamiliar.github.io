@@ -17,15 +17,11 @@ layout: default
 
 <h2>Latest Insights</h2>
 <ul class="post-preview-list compacted">
-<!-- {{#foreach posts limit="6" order="published_at desc"}}
-  <li class="post-preview">
-          {{> "card"}} {{!-- partials/card.hbs --}}
-  </li>
-{{else}}
+{% if site.posts.length %}
   <li><p>Uh-oh! There are no posts here yet.</p></li>
-{{/foreach}} -->
+{% endif %}
 </ul>
-<p><a title="Click to view more insights" href="{{@site.url}}/insights/">View More Insights...</a></p>
+<!-- <p><a title="Click to view more insights" href="{{@site.url}}/insights/">View More Insights...</a></p> -->
 <br />
 <br />
 

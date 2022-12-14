@@ -37,11 +37,14 @@
 	<!--<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />-->
 	
 	<body>
+		<a id="skip-to-content" href="#main-content" title="Click to skip to main content." aria-label="Click to skip to main content." target="_self">Skip to main content.</a>
 		{% include header.html %}
 
-		<main class="page-content" aria-label="Content">
-			<div class="wrapper">
-				{{ content }}
+		<main id="main-content">
+			<div class="body-contents">
+				<article>
+					{{ content }}
+				</article>
 			</div>
 		</main>
 

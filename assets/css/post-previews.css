@@ -1,0 +1,240 @@
+/* ########################
+	POST PREVIEW LISTS
+########################### */
+/* Default */
+.post-previews {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	align-items: flex-start;
+}
+	.post-previews .post-preview {
+		width: calc(100% - 1rem);
+		max-width: 300px;
+		margin: 1rem;
+	}
+		.post-previews .post-preview a {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			transform: scale(1);
+			text-decoration: none;
+			color: var(--eggplant);
+			transition: transform 0.5s;
+		}
+			.post-previews .post-preview a:hover {
+				transition: transform 0.5s;
+			}
+				.post-previews .post-preview:nth-child(even) a:hover {
+					transform: scale(1.05) rotate(-1deg);
+				}
+				.post-previews .post-preview:nth-child(odd) a:hover {
+					transform: scale(1.05) rotate(1deg);
+				}
+				.post-previews .post-preview:nth-child(even) a:active {
+					transform: scale(0.95) rotate(0deg);
+				}
+				.post-previews .post-preview:nth-child(odd) a:active {
+					transform: scale(0.95) rotate(0deg);
+				}
+			.post-previews .post-preview a .post-preview-header {
+				position: relative;
+			}
+				.post-previews .post-preview a .post-preview-header .bg-img {
+					width: 100%;
+					height: 10rem;
+					border-radius: 1.5rem;
+					object-position: 0% 0%;
+					transform: scale(1);
+					transition: transform 0.5s, object-position 1s;
+				}
+					.post-previews .post-preview a:hover .post-preview-header .bg-img {
+						object-position: 100% 0%;
+						transform: scale(1.05);
+						transition: transform 1s, object-position 2s;
+					}
+			.post-previews .post-preview a .post-preview-body {
+				margin-top: -0.5rem;
+				padding: 0.75rem 1rem 1.25rem 1rem;
+				border: 5px dashed var(--purple);
+				border-radius: 0 0 1.5rem 1.5rem;
+				border-top: 0 solid transparent;
+				text-align: center;
+				overflow: hidden;
+				transition: border-right 0.3s, border-bottom 0.3s, border-left 0.3s, border-color 0.3s;
+			}
+				.post-previews .post-preview a:hover .post-preview-body {
+					border-right: 7px dashed var(--pink);
+					border-bottom: 7px dashed var(--pink);
+					border-left: 7px dashed var(--pink);
+				}
+				.post-previews .post-preview a:active .post-preview-body {
+					border-right-color: var(--purple-lighter);
+					border-bottom-color: var(--purple-lighter);
+					border-left-color: var(--purple-lighter);
+				}
+				.post-previews .post-preview a .post-preview-body .title {
+					margin-bottom: 0.5rem;
+					font-family: var(--font-primary);
+					font-size: 1.125rem;
+				}
+				.post-previews .post-preview a .post-preview-body .description {
+					margin-bottom: 0;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					font-size: 0.875rem;
+				}
+
+/* Compacted */
+.post-previews.compacted {}
+	.post-previews.compacted .post-preview {
+		width: calc(100% - 1rem);
+		max-width: 500px;
+		margin: 1.5rem 1rem 0.75rem;
+	}
+		.post-previews.compacted .post-preview a {
+			flex-direction: row;
+			border-top: 5px dashed var(--purple);
+			border-bottom: 5px dashed var(--purple);
+			transform: scale(1);
+			transition: transform 0.5s, border-top 0.3s, border-bottom 0.3s, border-color 0.3s;
+		}
+			.post-previews.compacted .post-preview:nth-child(even) a:hover {
+				transform: initial;
+			}
+			.post-previews.compacted .post-preview:nth-child(odd) a:hover {
+				transform:initial;
+			}
+				.post-previews.compacted .post-preview a:hover {
+					border-top: 7px dashed var(--pink);
+					border-bottom: 7px dashed var(--pink);
+					transform: scale(1.05);
+					/*transition: transform 0.5s, border-top 0.3s, border-bottom 0.3s;*/
+				}
+			.post-previews.compacted .post-preview:nth-child(even) a:active {
+				transform: initial;
+			}
+			.post-previews.compacted .post-preview:nth-child(odd) a:active {
+				transform: initial;
+			}
+				.post-previews.compacted .post-preview a:active {
+					border-top-color: var(--purple-lighter);
+					border-bottom-color: var(--purple-lighter);
+					transform: scale(0.95);
+				}
+			.post-previews.compacted .post-preview a .post-preview-header {
+				margin-top: -2px;
+			}
+				.post-previews.compacted .post-preview a .post-preview-header .bg-img {
+					width: 100px;
+					height: 75px;
+					border-radius: 1rem;
+					margin-bottom: 0.5rem;
+					object-position: initial;
+					transform: scale(1);
+					transition: transform 0.3s;
+				}
+					.post-previews.compacted .post-preview a:hover .post-preview-header .bg-img {
+						object-position: initial;
+						transform: scale(1.15);
+						transition: transform 0.5s;
+					}
+			.post-previews.compacted .post-preview a .post-preview-body {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				width: 100%;
+				padding: 0.5rem;
+				margin-top: initial;
+				border: 0 solid transparent;
+				border-radius: 0;
+				text-align: left;
+				transition: none;
+			}
+				.post-previews.compacted .post-preview a:hover .post-preview-body,
+				.post-previews.compacted .post-preview a:active .post-preview-body {
+					border: 0 solid transparent;
+				}
+				.post-previews.compacted .post-preview a .post-preview-body .title {
+					width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					margin-bottom: 0.25rem;
+				}
+				.post-previews.compacted .post-preview a .post-preview-body .description {
+					width: 100%;
+					margin-bottom: 0.25rem;
+				}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+	.post-previews {
+		justify-content: space-evenly;
+		width: calc(50% - 1rem);
+		max-width: initial;
+		margin: 0.5rem;
+	}
+	
+	.post-previews.compacted .post-preview {
+	    width: calc(50% - 2rem);
+		max-width: initial;
+		margin: 1.5rem 1rem 0.75rem;
+	}
+		.post-previews.compacted .post-preview a .post-preview-header .bg-img {
+			width: 95px;
+			height: 71px;
+		}
+}
+@media only screen and (min-width: 1024px ) {
+	.post-previews .post-preview {
+		width: calc(50% - 1.5rem);
+		margin: 0.5rem;
+	}
+	
+	.post-previews.compacted .post-preview {
+		width: calc(33.333% - 2rem);
+		margin: 1.5rem 1rem 0.75rem;
+	}
+		.post-previews.compacted .post-preview a .post-preview-header .bg-img {
+			width: 115px;
+			height: 85px;
+		}
+}
+@media only screen and (min-width: 1440px) {
+	.post-previews .post-preview,
+	.post-previews.compacted .post-preview {
+		width: calc(33.333% - 1rem);
+		min-width: 197px;
+	    max-width: initial;
+	}
+	.post-previews.compacted .post-preview {
+		width: calc(33.333% - 2rem);
+	}
+		.post-previews .post-preview a .post-preview-header .bg-img {
+			width: 100%;
+			height: 10rem;
+			border-radius: 1.5rem;
+		}
+		.post-previews.compacted .post-preview a .post-preview-header .bg-img {
+			width: 100px;
+			height: 75px;
+		}
+}
+@media only screen and (min-width: 2560px) {
+	.post-previews .post-preview,
+	.post-previews.compacted .post-preview {
+		width: calc(33.333% - 2rem);
+		min-width: 350px;
+		max-width: 450px;
+		margin: 1rem;
+	}
+		.post-previews.compacted .post-preview a .post-preview-header .bg-img {
+			width: 200px;
+			height: 150px;
+		}
+}

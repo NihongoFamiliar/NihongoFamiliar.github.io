@@ -37,7 +37,7 @@
 	<!--<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />-->
 	
 	<body>
-		{%- include header.html -%}
+		{% include header.html %}
 
 		<main class="page-content" aria-label="Content">
 			<div class="wrapper">
@@ -45,6 +45,10 @@
 			</div>
 		</main>
 
-		{%- include footer.html -%}
+		{% include footer.html %}
+
+		<!-- Internal Scripps -->
+		<script src="/assets/js/hamburger-menu.js"></script>
+		<script src="/assets/js/shooting-stars.js"></script>
 	</body>
 </html>

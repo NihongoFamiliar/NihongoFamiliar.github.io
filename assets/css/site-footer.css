@@ -1,0 +1,176 @@
+/* ########################
+	SITE FOOTER
+########################### */
+
+#site-footer {
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	width: 100%;
+	padding: 1rem;
+	background-color: var(--purple);
+    border-top: 1rem solid var(--purple-lightest);
+	font-family: var(--font-secondary);
+}
+	#site-footer .row {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+	#site-footer .tyvm {
+	    align-items: flex-end;
+		font-size: 1.5rem;
+		border-bottom: 3px dashed white;
+	    padding: 1rem 0 1.75rem 0;
+		margin-bottom: 1.75rem;
+	}
+	#site-footer .socials {
+		justify-content: center;
+		align-items: flex-end;
+	}
+	#site-footer .socials .soc-media {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+	    margin-right: 1rem;
+	    margin-bottom: 1.5rem;
+	}
+		#site-footer .socials .soc-media .soc-list {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			align-items: center;
+		    margin-top: 0.5rem;
+			list-style: none;
+		    font-weight: bold;
+		}
+			#site-footer .socials .soc-media .soc-list .soc-item:not(:last-of-type) {
+				margin-right: 0.5rem;
+			}
+				#site-footer .socials .soc-media .soc-list .soc-item a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 0.6rem;
+					border-radius: 1.175rem;
+					background-color: var(--pink);
+					transition: background-color 0.5s, opacity 0.5s, transform 0.3s;
+				}
+					#site-footer .socials .soc-media .soc-list .soc-item a:hover {
+						background-color: var(--white);
+						transform: scale(1.125);
+						transition: background-color 0.5s, opacity 0.5s, transform 0.3s;
+					}
+					#site-footer .socials .soc-media .soc-list .soc-item a:active {
+						transform: scale(0.9);
+						opacity: 0.6;
+						transition: background-color 0.5s, opacity 0.5s, transform 0.3s;
+					}
+					#site-footer .socials .soc-media .soc-list .soc-item a svg {
+						fill: var(--white);
+						transition: fill 0.3s;
+					}
+						#site-footer .socials .soc-media .soc-list .soc-item a:hover svg.twitter-mark {
+							fill: #1da1f2;
+							transition: fill 0.3s;
+						}
+				#site-footer .socials .soc-media .soc-list .soc-item.tbd::after {
+					content: '\2605'; /* ★ OR \01F7CA 🟊 */
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 20px;
+					height: 20px;
+					padding: 0.6rem;
+					border-radius: 1.175rem;
+					border: 3px dotted var(--white-30);
+					color: var(--white-30);
+					font-weight: bold;
+					font-style: normal;
+					line-height: 0;
+				}
+
+	#site-footer .socials #ko-fi-button {
+	    margin-bottom: 1.5rem;
+	}
+		#site-footer .socials #ko-fi-button a.kofi-button {
+		   padding: 0 1rem 0.25rem 1rem!important;
+		   border-radius: 1rem!important;
+		   font-size: 0.8rem!important;
+		   background-color: var(--pink)!important;
+		   transition: background-color 0.5s, opacity 0.5s, transform 0.3s, color 0.3s;
+		}
+			#site-footer .socials #ko-fi-button a.kofi-button span.kofitext {
+			   color: var(--white)!important;
+			}
+			#site-footer .socials #ko-fi-button a.kofi-button:hover {
+			   background-color: var(--white)!important;
+			   transform: scale(1.125);
+			   transition: background-color 0.5s, opacity 0.5s, transform 0.3s, color 0.3s;
+			}
+				#site-footer .socials #ko-fi-button a.kofi-button:hover span.kofitext {
+	 			   color: var(--purple)!important;
+				}
+			#site-footer .socials #ko-fi-button a.kofi-button:active {
+				transform: scale(0.9);
+				opacity: 0.6;
+				transition: background-color 0.5s, opacity 0.5s, transform 0.3s, color 0.3s;
+			}
+
+	#site-footer .the-annoying-but-necessary { /* The copyright stuff */
+		margin: 1rem;
+	    font-weight: bold;
+		font-size: 0.8rem;
+	}
+
+	#site-footer p {
+		color: var(--white);
+		margin: 0;
+	}
+#shooting-stars-footer {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	pointer-events: none;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+	#site-footer {
+		padding: 0 6rem;
+	}
+		#site-footer .socials {
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+			#site-footer .socials .soc-media {
+				margin-bottom: 1rem;
+			}
+			#site-footer .socials #ko-fi-button {
+				margin-bottom: 1rem;
+			}
+}
+@media only screen and (min-width: 1024px ) {
+	#site-footer {
+		padding: 0 5.5rem;
+	}
+}
+@media only screen and (min-width: 1440px) {
+	#site-footer {
+		padding: 0 12rem;
+	}
+		#site-footer .socials {
+			justify-content: space-evenly;
+		}
+}
+@media only screen and (min-width: 2560px) {
+	#site-footer {
+		padding: 0 10.5rem;
+	}
+}

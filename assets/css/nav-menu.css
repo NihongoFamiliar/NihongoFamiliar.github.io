@@ -36,9 +36,10 @@
 				transform: scale(1.05);
 				transition: transform 1s;
 			}
-			.logo-mark:active .logo-mark-shadow {
-				fill: var(--white-30);
-			}
+			.logo-mark .logo-mark-shadow { transition: fill 0.3s; }
+				.logo-mark:active .logo-mark-shadow {
+					fill: var(--white-30);
+				}
 			.logo-mark:hover .logo-mark-tanzaku {
 				transform-origin: left center;
 				transform: rotateZ(0deg);

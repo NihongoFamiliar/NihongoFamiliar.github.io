@@ -1,0 +1,232 @@
+/* ########################
+	FOUNDATIONAL STYLES
+########################### */
+/* Base proportioning and setup */
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	position: relative;
+	background-color: var(--eggplant);
+	font-family: var(--font-secondary);
+	color: var(--eggplant);
+}
+
+/* BASE FONT PROPORTIONS */
+html { font-size: 16px; }
+body { font-size: 1rem; }
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+small { font-size: 0.6em }
+
+img {
+	object-fit: cover;
+	max-width: 100%;
+}
+
+/* Texts */
+hr {
+	border-top: 5px dashed var(--purple-lightest);
+	margin: 2rem 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-primary);
+	margin: 1rem 0 0.5rem 0;
+}
+small {
+	font-family: var(--font-accent);
+	font-style: italic;
+}
+p {
+	margin-bottom: 1rem;
+}
+a {
+	display: inline-block;
+	font-weight: bolder;
+	transition: color 0.3s;
+}
+	a, a:visited {
+		color: var(--purple);
+		text-decoration: underline dotted;
+		transition: color 0.3s, opacity 0.3s;
+	}
+	a:hover {
+		color: var(--pink);
+		transition: color 0.3s, opacity 0.3s;
+	}
+	a:active {
+		opacity: 0.6;
+		transition: color 0.3s, opacity 0.3s;
+	}
+blockquote {
+	padding: 1.5rem;
+	border: 3px dashed var(--purple-lightest);
+	border-left: 10px solid var(--purple-lighter);
+	color: var(--purple-lighter);
+	font-size: 1.3rem;
+}
+	blockquote cite {
+		display: block;
+		margin-top: 0.5rem;
+		font-weight: bold;
+		color: var(--purple-lightest);
+	}
+code {
+	border-top: 2px dashed var(--purple-lighter);
+	border-bottom: 2px dashed var(--purple-lighter);
+	color: var(--purple-lighter);
+}
+pre {
+	margin-bottom: 2rem;
+	width: auto;
+	overflow: auto;
+	white-space: pre-line;
+}
+	pre code {
+		white-space: inherit;
+		display: block;
+		padding: 1rem;
+		border: 3px dotted var(--purple-lightest);
+		border-left: 10px dashed var(--purple-lighter);
+		color: var(--purple-lighter);
+	}
+
+/* Tables */
+table, td, th {
+	font-size: 0.9rem;
+	text-align: left;
+}
+thead, tfoot {
+	font-family: var(--font-accent);
+	font-weight: bold;
+}
+table {
+	display: block;
+	max-width: 100%;
+	overflow: auto;
+	border-collapse: collapse;
+	background-color: var(--white);
+}
+	thead {
+		background-color: var(--purple);
+		color: var(--white);
+	}
+		thead th {
+			border: 3px dashed var(--purple-lighter);
+			border-bottom: 3px solid var(--purple-lightest);
+		}
+	tfoot {
+		color: var(--purple);
+	}
+	td {
+		border: 3px dashed var(--purple-lightest);
+	}
+	th, td {
+		padding: 0.5rem;
+	}
+
+/* Forms */
+button, input[type=submit], input[type=reset] {
+	min-width: 10rem;
+	margin: 0.5rem 0.25rem;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	font-family: var(--font-accent);
+	font-weight: bold;
+	outline: 0 solid transparent;
+	transition: background-color 0.3s, border 0.3s;
+}
+	button.primary, input[type=submit] {
+		background-color: var(--pink);
+		border: 3px dotted var(--white);
+		color: var(--white);
+	}
+		button.primary:hover, input[type=submit]:hover {
+			background-color: var(--purple-lighter);
+		}
+		button.primary:active, input[type=submit]:active {
+			background-color: var(--purple);
+		}
+		button.primary:disabled, input[type=submit]:disabled {
+			background-color: var(--purple-lightest);
+			border: 3px dotted var(--white);
+			color: var(--white);
+		}
+	button.secondary, input[type=reset] {
+		background-color: var(--white);
+		border: 5px dashed var(--pink);
+		color: var(--pink);
+	}
+		button.secondary:hover, input[type=reset]:hover {
+			border: 5px dashed var(--purple-lighter);
+			color: var(--purple-lighter);
+		}
+		button.secondary:active, input[type=reset]:active {
+			border: 5px dashed var(--purple);
+			color: var(--purple);
+		}
+		button.secondary:disabled, input[type=reset]:disabled {
+			background-color: var(--white);
+			border: 5px dashed var(--purple-lightest);
+			color: var(--purple-lightest);
+		}
+input, textarea, select {
+	border: 2px solid var(--purple-lighter);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	margin: 0.5rem 0;
+	color: var(--eggplant);
+	outline: 0 solid transparent;
+}
+	input::placeholder, textarea::placeholder {
+		color: var(--purple-lightest);
+	}
+select {
+	position: relative;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+	select:required:invalid {
+		color: var(--purple-lightest);
+	}
+	.select-wrapper {
+		display: inline-block;
+		position: relative;
+	}
+		.select-wrapper::after {
+			content: '\26DB';
+			display: inline-block;
+			position: absolute;
+			right: 0.5rem;
+			top: calc(50% - 0.65rem);
+			font-size: 0.9rem;
+			color: var(--purple-lighter);
+			pointer-events: none;
+		}
+	select option {
+		color: var(--eggplant);
+	}
+		select option:disabled {
+			color: var(--purple-lightest);
+		}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+	html { font-size: 16px; }
+}
+@media only screen and (min-width: 1024px ) {
+	html { font-size: 18px; }
+}
+@media only screen and (min-width: 1440px) {
+	html { font-size: 18px; }
+}
+@media only screen and (min-width: 2560px) {
+	html { font-size: 24px; }
+}

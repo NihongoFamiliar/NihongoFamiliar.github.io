@@ -208,7 +208,50 @@
 	  from { width: 80vw; }
 	  to { width: 0vw; }
 	}
-
+@keyframes tanzaku-wave {
+	0% {
+		transform: rotateZ(3.25deg);
+	}
+	50% {
+		transform: rotateZ(-3.25deg);
+	}
+	100% {
+		transform: rotateZ(3.25deg);
+	}
+}
+@keyframes star1-waggle {
+	0% {
+		transform: translate(0.25%, 18%) rotate(45deg);
+	}
+	50% {
+		transform: translate(-1%, -13%) rotate(90deg);
+	}
+	100% {
+		transform: translate(0.25%, 18%) rotate(45deg);
+	}
+}
+@keyframes star2-waggle {
+	0% {
+		transform: translate(0.5%, 20%) rotate(-90deg);
+	}
+	50% {
+		transform: translate(-0.75%, -33%) rotate(-180deg);
+	}
+	100% {
+		transform: translate(-0.5%, 25%) rotate(-90deg);
+	}
+}
+@keyframes star3-waggle {
+	0% {
+		transform: translate(2%, 45%) rotate(180deg);
+	}
+	50% {
+		transform: translate(4%, -17.5%) rotate(360deg);
+	}
+	100% {
+		transform: translate(5%, 45%) rotate(180deg);
+	}
+}
 
 /* Media Queries */
 @media only screen and (min-width: 768px) {

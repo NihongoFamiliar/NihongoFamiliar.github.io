@@ -52,9 +52,12 @@
 		</a>
     <div id="nav-menu">
 			<ul>
-					<li class="{% if page.path == '/' %}current-page{% endif %}" role="menuitem">
-						<a href="/" title="Click to visit the Nihongo Familiar home page." aria-label="Click to visit the Nihongo Familiar home page." target="_self">Home</a>
-					</li>
+				<li class="{% if page.path == '/' %}current-page{% endif %}" role="menuitem">
+					<a href="/" title="Click to visit the Nihongo Familiar home page." aria-label="Click to visit the Nihongo Familiar home page." target="_self">Home</a>
+				</li>
+				<li class="{% if page.path == '/insights/' %}current-page{% endif %}" role="menuitem">
+					<a href="/insights/" title="Click to view insights from Nihongo Familiar blog posts." aria-label="Click to insights from Nihongo Familiar blog posts." target="_self">Insights</a>
+				</li>
 			</ul>
 		</div>
 		<button aria-label="Press to open the navigation menu" id="nav-menu-hamburger">

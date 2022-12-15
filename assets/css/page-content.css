@@ -1,4 +1,166 @@
 /* ########################
 	PAGE & POST CONTENT
 ########################### */
-/* TODO */
+/* Hero */
+#hero {
+	position: absolute;
+	top: -1rem; left: 0; right: 0;
+	width: calc(100vw - (100vw - 100%));
+	height: 50vh;
+	background-size: cover;
+	background-position: center;
+    /*position: relative;
+	margin-top: -1rem;
+	height: 100%;
+	min-height: 50vh;
+	background-size: cover;
+	background-position: center;*/
+}
+	#hero img {
+		width: calc(100vw - (100vw - 100%));
+		height: 100%;
+	}
+#hero-star-veil {
+	position: absolute;
+	width: calc(100vw - (100vw - 100%));
+	height: 100%;
+	min-height: 50vh;
+	pointer-events: none;
+}
+
+/* Page Header */
+main > .main-body > article > header {
+	position: relative;
+	margin-top: calc(50vh + 1rem);
+}
+
+/* Page Body */
+main {
+	margin-top: -2rem;
+	border-top: 1.5rem solid var(--white-60);
+	box-shadow: 0px -1rem var(--white-30);
+	overflow: hidden;
+}
+	main > .main-body {
+		position: relative;
+		padding: 1rem 1rem 3rem 1rem;
+		min-height: 50vh;
+		background-color: var(--white);
+		background-image: url('../images/stars-bg.svg');
+		background-attachment: fixed;
+		background-position: 0.25rem 1rem;
+		background-size: 50vw;
+		background-repeat: repeat-y;
+	}
+		main > .main-body > article {
+			width: 100%;
+			background-color: var(--white-60);
+		}
+			main > .main-body > article p {
+				margin-bottom: 1rem;
+			}
+h1 > small {
+	display: block;
+	color: var(--purple);
+	margin-top: 0.15rem;
+}
+
+/* Page Footer */
+main > .main-body > article > footer .footer-content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+	main > .main-body > article > footer .article-author {
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+		main > .main-body > article > footer .article-author img {
+			width: 4rem;
+			height: 4rem;
+			border-radius: 100%;
+			border: 5px dashed var(--purple);
+			margin-right: 0.5rem;
+			overflow: hidden;
+		}
+			main > .main-body > article > footer .article-author:hover img {
+				border-color: var(--purple-lighter);
+			}
+			main > .main-body > article > footer .article-author:active img {
+				border-color: var(--purple);
+			}
+		main > .main-body > article > footer .article-author p {}
+	main > .main-body > article > footer .article-date {
+		margin-top: 0rem;
+		margin-bottom: 2rem;
+		font-family: var(--font-accent);
+		color: var(--purple);
+	}
+
+/* Dividers */
+.article-title-divider, .article-footer-divider {
+	display: inline-block;
+	margin: 1.5rem calc(50% - 3rem);
+	border-top: 5px dashed var(--purple);
+	width: 7rem;
+}
+	.article-title-divider { margin-bottom: 2rem; }
+	.article-footer-divider { margin-top: 2rem; }
+
+
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+	main > .main-body {
+		padding: 2rem 6rem 3rem 6rem;
+		background-size: 5rem;
+	}
+	main > .main-body > article {
+		background-color: transparent;
+	}
+		main > .main-body > article > footer .footer-content {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+			main > .main-body > article > footer .article-author {
+				margin-bottom: 0;
+				margin-right: 0.5rem;
+			}
+				main > .main-body > article > footer .article-author img {
+					margin-right: 0.5rem;
+				}
+			main > .main-body > article > footer .article-date {
+				margin: 0;
+			}
+
+	.article-title-divider, .article-footer-divider {
+		margin: 1.5rem 0;
+	}
+		.article-title-divider { margin-bottom: 3rem; }
+		.article-footer-divider { margin-top: 3rem; }
+}
+@media only screen and (min-width: 1024px ) {
+	main > .main-body {
+		padding: 3rem 5.5rem 3rem 5.5rem;
+		background-size: 4rem;
+	}
+}
+@media only screen and (min-width: 1440px) {
+	main > .main-body {
+		padding: 3rem 12rem 3rem 12rem;
+		background-size: 9rem;
+	}
+}
+@media only screen and (min-width: 2560px) {
+	main > .main-body {
+		padding: 3rem 10.5rem 3rem 10.5rem;
+		background-size: 8rem;
+	}
+}

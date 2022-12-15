@@ -175,13 +175,14 @@
 @media only screen and (min-width: 768px) {
 	.post-previews {
 		justify-content: space-evenly;
-		width: calc(50% - 1rem);
+		min-width: calc(50% - 1rem);
+		width: 100%;
 		max-width: initial;
 		margin: 0.5rem;
 	}
 	
 	.post-previews.compacted .post-preview {
-	    width: calc(50% - 2rem);
+	    	width: calc(50% - 2rem);
 		max-width: initial;
 		margin: 1.5rem 1rem 0.75rem;
 	}

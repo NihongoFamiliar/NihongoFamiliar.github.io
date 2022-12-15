@@ -168,8 +168,6 @@
 	}
 /* Bookmark links */
 .bookmark-card {
-	display: flex;
-	flex-direction: column;
 	overflow: hidden;
 	width: 100%;
 	border: 3px solid var(--purple-lighter);
@@ -177,6 +175,11 @@
 	color: var(--eggplant);
 	text-decoration: none;
 }
+	.bookmark-card > a {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
 	.bookmark-card .bookmark-content {
 		flex: 1.5;
 		padding: 1rem;
@@ -242,8 +245,8 @@
 
 /* Media Queries */
 @media only screen and (min-width: 768px) {
-	.bookmark-card {
-		flex-direction: reverse-row;
+	.bookmark-card > a{
+		flex-direction: row-reverse;
 	}
 		.bookmark-card .bookmark-content {
 			flex: 3;

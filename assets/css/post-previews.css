@@ -71,7 +71,33 @@
 						transform: rotateZ(-12deg) scale(1.1);
 						transition: transform 1s;
 					}
-
+					.post-previews .post-preview .tag-flag svg {
+						width: 100%;
+					}
+					.post-previews .post-preview .tag-flag .tanzaku-container {
+						width: 100%;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+						.post-previews .post-preview .tag-flag .tanzaku-container .tanzaku,
+						.post-previews .post-preview .tag-flag .tanzaku-container .star-1,
+						.post-previews .post-preview .tag-flag .tanzaku-container .star-2,
+						.post-previews .post-preview .tag-flag .tanzaku-container .star-3 {
+							fill: var(--purple);
+							transition: fill 0.3s;
+						}
+							.post-previews .post-preview a:hover .tag-flag .tanzaku-container .tanzaku,
+							.post-previews .post-preview a:hover .tag-flag .tanzaku-container .star-1,
+							.post-previews .post-preview a:hover .tag-flag .tanzaku-container .star-2,
+							.post-previews .post-preview a:hover .tag-flag .tanzaku-container .star-3 {
+								fill: var(--pink);
+							}
+							.post-previews .post-preview a:active .tag-flag .tanzaku-container .tanzaku,
+							.post-previews .post-preview a:active .tag-flag .tanzaku-container .star-1,
+							.post-previews .post-preview a:active .tag-flag .tanzaku-container .star-2,
+							.post-previews .post-preview a:active .tag-flag .tanzaku-container .star-3 {
+								fill: var(--purple-lighter);
+							}
 					.post-previews .post-preview .tag-flag p {
 						position: absolute;
 						top: 0.85rem;

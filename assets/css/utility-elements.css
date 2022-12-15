@@ -243,14 +243,13 @@
 /* Media Queries */
 @media only screen and (min-width: 768px) {
 	.bookmark-card {
-		flex-direction: row;
+		flex-direction: reverse-row;
 	}
 		.bookmark-card .bookmark-content {
-			order: 1;
+			flex: 3;
 		}
 	.bookmark-card .bookmark-thumbnail {
 		flex: 1;
-		order: 2;
 		border-bottom: initial;
 		border-left: 3px dotted var(--purple-lighter);
 	}

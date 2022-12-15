@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<figure id="hero" aria-hidden="true">
+{% if post.hero_src %}
+	<img src={{page.hero_src}}>
+{% else %}
+	<img src="/assets/images/foundation/default-hero.png">
+{% endif %}
+</figure>
+
+<header class="title">
+	<h1>
+		{{page.title}}
+		{% if page.subtitle %}<small>{{page.subtitle}}</small>{% endif %}
+	</h1>	
+	<hr class="article-title-divider" />
+</header>
+
+<div>{{content}}</div>
+
+<footer>
+	<hr class="article-footer-divider" />
+</footer>

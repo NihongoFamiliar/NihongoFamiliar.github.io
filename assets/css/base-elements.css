@@ -97,23 +97,25 @@ pre {
 		color: var(--purple-lighter);
 	}
 /* Text Lists */
-#body article ul, #body .page ul {
+main > .main-body > article ul {
 	list-style: none;
 	margin-bottom: 1rem;
 }
-	#body article ul ul, #body .page ul ul, #body article ul ol, #body .page ul ol, #body article ul dl, #body .page ul dl {
+	main > .main-body > article ul ul,
+	main > .main-body > article ul ol,
+	main > .main-body > article ul dl {
 		margin-top: 0.5rem;
 		margin-left: 1.75rem;
 		margin-bottom: 0.5rem;
 	}
-	#body article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) li, #body .page ul:not(.post-previews):not(.authors):not(.tags):not(.socials) li {
+	main > .main-body > article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) li {
 		position: relative;
 		padding-left: 1.75rem;
 	}
-		#body article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) li:not(:last-of-type), #body .page ul:not(.post-previews):not(.authors):not(.tags):not(.socials) li:not(:last-of-type) {
+		main > .main-body > article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) li:not(:last-of-type) {
 			margin-bottom: 0.5rem;
 		}
-		#body article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) li::before, #body .page ul:not(.post-previews):not(.authors):not(.tags):not(.socials) li::before {
+		main > .main-body > article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) li::before {
 			content: '\272A'; /* ✪ */
 			position: absolute;
 			left: 0;
@@ -123,47 +125,51 @@ pre {
 			font-weight: bold;
 			line-height: 1.35;
 		}
-			#body article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul li::before, #body .page ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul li::before {
+			main > .main-body > article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul li::before {
 				content: '\2605'; /* ★ OR \01F7CA 🟊 */
 			}
-				#body article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul li::before, #body .page ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul li::before {
+				main > .main-body > article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul li::before {
 					content: '\01F7C6'; /* 🟆 */
 				}
-					#body article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul li::before, #body .page ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul li::before {
+					main > .main-body > article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul li::before {
 						content: '\2726'; /* ✦ OR \01F7C4 🟄 */
 					}
-						#body article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul ul li::before, #body .page ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul ul li::before {
+						main > .main-body > article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul ul li::before {
 							content: '\22C6'; /* ⋆ OR \066D ٭ */
 						}
-							#body article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul ul ul li::before, #body .page ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul ul ul li::before {
+							main > .main-body > article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul ul ul li::before {
 								content: '\2B51'; /* ⭑ */
 							}
-								#body article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul ul ul ul li::before, #body .page ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul ul ul ul li::before {
+								main > .main-body > article ul:not(.post-previews):not(.authors):not(.tags):not(.socials) ul ul ul ul ul ul li::before {
 									content: '\25E6'; /* ◦ OR \2022 • */
 
 								}
-article dl, .page dl {
+main > .main-body > article dl {
 	margin-bottom: 1rem;
 }
-	article dl ul, .page dl ul, article dl ol, .page dl ol, article dl dl, .page dl dl {
+	main > .main-body > article dl ul,
+	main > .main-body > article dl ol,
+	main > .main-body > article dl dl {
 		margin-top: 0.5rem;
 		margin-left: 1.75rem;
 		margin-bottom: 0.5rem;
 	}
-article ol, .page ol {
+main > .main-body > article ol {
 	list-style: none;
 	counter-reset: li;
 	margin-bottom: 1rem;
 }
-	article ol ul, .page ol ul, article ol ol, .page ol ol, article ol dl, .page ol dl {
+	main > .main-body > article ol ul,
+	main > .main-body > article ol ol,
+	main > .main-body > article ol dl {
 		margin-top: 0.5rem;
 		margin-left: 1.75rem;
 		margin-bottom: 0.5rem;
 	}
-	article ol > li, .page ol > li {
+	main > .main-body > article ol > li {
 		counter-increment: li;
 	}
-		article ol > li::before, .page ol > li::before {
+		main > .main-body > article ol > li::before {
 			content: counter(li) ".";
 			color: var(--purple-lighter);
 			font-weight: bold;
@@ -171,12 +177,12 @@ article ol, .page ol {
 			width: 1rem;
 			margin-right: 0.75rem;
 		}
-	article dl > dt, .page dl > dt {
+	main > .main-body > article dl > dt {
 		font-family: var(--font-accent);
 		font-weight: bold;
 		color: var(--purple-lighter);
 	}
-	article dl > dt:not(:first-of-type), .page dl > dt:not(:first-of-type) {
+	main > .main-body > article dl > dt:not(:first-of-type) {
 		margin-top: 1rem;
 	}
 /* Tables */

@@ -52,14 +52,13 @@
 		</a>
     <div id="nav-menu">
 			<ul>
-				<li>TEST: {{page.path}} || {{page.url}}</li>
-				<li class="{% if page.path == '/' %}current-page{% endif %}" role="menuitem">
+				<li class="{% if page.url == '/' %}current-page{% endif %}" role="menuitem">
 					<a href="/" title="Click to visit the Nihongo Familiar home page." aria-label="Click to visit the Nihongo Familiar home page." target="_self">Home</a>
 				</li>
-				<li class="{% if page.path == '/insights/' %}current-page{% endif %}" role="menuitem">
+				<li class="{% if page.url == '/insights/' %}current-page{% endif %}" role="menuitem">
 					<a href="/insights/" title="Click to view insights from Nihongo Familiar blog posts." aria-label="Click to insights from Nihongo Familiar blog posts." target="_self">Insights</a>
 				</li>
-				<li class="{% if page.path == '/projects/' %}current-page{% endif %}" role="menuitem">
+				<li class="{% if page.url == '/projects/' %}current-page{% endif %}" role="menuitem">
 					<a href="/projects/" title="Click to view projects to help study Japanese." aria-label="Click to view projects to help study Japanese." target="_self">Projects</a>
 				</li>
 			</ul>

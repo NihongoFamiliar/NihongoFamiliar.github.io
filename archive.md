@@ -7,7 +7,7 @@ permalink: "/insights/"
 
 <ul class="post-previews">
 {% if site.posts.size > 0 %}
-  {% for post in site.posts limit:6 %}
+  {% for post in site.posts %}
     {% include postcard.html %}
   {% endfor %}
 {% else %}

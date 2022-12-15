@@ -1,30 +1,35 @@
 ---
 layout: default
 ---
-<link href="/css/override.css" rel="stylesheet" type="text/css">
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {% assign author = page.author | default: site.author %}
-      {%- if author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-      {%- endif -%}</p>
-  </header>
+<figure id="hero" aria-hidden="true">
+{% if post.hero_src %}
+	<img src={{page.hero_src}}>
+{% else %}
+	<img src="/assets/images/foundation/default-hero.png">
+{% endif %}
+</figure>
 
-  <div class="share-links">
-    {% include sharelinks.html %}
-  </div>
+<header class="title">
+	<h1>
+		{{page.title}}
+		{% if page.subtitle %}<small>{{page.subtitle}}</small>{% endif %}
+	</h1>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-    {% include navlinks.html %}
-  </div>
+	<!--<div class="share-bar">{% include sharelinks.html %}</div>-->
+	
+	<hr class="article-title-divider" />
+</header>
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+<div>{{content}}</div>
+
+<footer>
+	<!--<div class="share-bar">{% include sharelinks.html %}</div>-->
+	<hr class="article-footer-divider" />
+	
+	<div class="footer-content">
+		<p class="article-date">
+			Published on {{page.date | date: "date_to_long_string"}}.
+		</p>
+	</div>
+</footer>

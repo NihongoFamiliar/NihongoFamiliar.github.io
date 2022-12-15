@@ -1,7 +1,7 @@
 /* Footer Shooting stars! */
 const siteFooter = document.getElementById('site-footer');
 if (siteFooter) {
-	const bodyContents = document.getElementById('body').querySelector('.body-contents')
+	const bodyContents = document.getElementById('main-content').querySelector('.body-contents')
 	const bodyContentsStyle = window.getComputedStyle(bodyContents);
 
 	const footerShootingStarsCanvas = document.createElement("canvas");
@@ -83,7 +83,7 @@ if (siteFooter) {
 			this.x -= this.vx;
 		}
 
-	    // Create the shapes
+		// Create the shapes
 		if (this.diameter > 6 && Math.round(Math.random()) > 0) {
 			this.diameter -= this.shrinkage;
 		}
@@ -92,7 +92,7 @@ if (siteFooter) {
 		const colour = `rgba(108, 111, 144, ${this.opacity})`; // purple
 		footerShootingStarsCtx.fillStyle = colour;
 
-	    // Draws the star
+		// Draws the star
 		footerShootingStarsCtx.fillText('\uf005', this.x, this.y);
 
 		// Destroy particle once too high
@@ -125,7 +125,7 @@ if (siteFooter) {
 	// Responsiveness handling
 	window.addEventListener('resize', function resizeFooterCanvas(e) {
 		const changedFooterRef = document.getElementById('site-footer');
-		const changedBody = document.getElementById('body').querySelector('.body-contents')
+		const changedBody = document.getElementById('main-content').querySelector('.body-contents')
 		const bodyStyle = window.getComputedStyle(changedBody);
 
 		footerShootingStarsCanvas.width = changedFooterRef.offsetWidth;
@@ -141,6 +141,7 @@ if (siteFooter) {
 const heroSection = document.getElementById('hero');
 if (heroSection) {
 	const heroStarsCanvas = document.createElement("canvas");
+	heroStarsCanvas.setAttribute('aria-hidden', true);
 	heroStarsCanvas.id = 'hero-star-veil';
 	heroStarsCanvas.width = heroSection.offsetWidth;
 	heroStarsCanvas.height = heroSection.offsetHeight;
@@ -297,7 +298,7 @@ if (heroSection) {
 			this.x -= this.vx;
 		}
 
-	    // Create the shapes
+		// Create the shapes
 		if (this.diameter > 6 && Math.round(Math.random()) > 0) {
 			this.diameter -= this.shrinkage;
 		}
@@ -307,7 +308,7 @@ if (heroSection) {
 		const colour = `rgba(251, 251, 251, ${this.opacity})`; // white
 		heroStarsCtx.fillStyle = colour;
 
-	    // Draws the star
+		// Draws the star
 		heroStarsCtx.fillText('\uf005', this.x, this.y);
 
 		// Destroy particle once too high
@@ -413,5 +414,4 @@ if (heroSection) {
 
 		setVeilParticles();
 	});
-
 }

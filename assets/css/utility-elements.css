@@ -170,6 +170,7 @@
 .bookmark-card {
 	overflow: hidden;
 	width: 100%;
+	max-width: 600px;
 	border: 3px solid var(--purple-lighter);
 	border-radius: 1.5rem;
 	color: var(--eggplant);

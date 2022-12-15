@@ -248,7 +248,7 @@
 		flex-direction: row-reverse;
 	}
 		.bookmark-card .bookmark-content {
-			flex: 3;
+			flex: 2;
 		}
 	.bookmark-card .bookmark-thumbnail {
 		flex: 1;

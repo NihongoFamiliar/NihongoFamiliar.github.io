@@ -24,7 +24,7 @@
 		-ms-transition: transform 0.5s ease-out, box-shadow 0.5s ease-in;
 		-khtml-transition: transform 0.5s ease-out, box-shadow 0.5s ease-in;
 	transition: transform 0.5s ease-out, box-shadow 0.5s ease-in;
-	z-index: 99999;
+	z-index: 9999999;
 }
 	#skip-to-content:focus {
 		box-shadow: 0 0.2rem 2rem 1.5rem var(--eggplant-15);

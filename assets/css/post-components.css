@@ -1,0 +1,226 @@
+/* ########################
+	POST COMPONENTS
+########################### */
+/* Images */
+.image-card {
+	display: inline-block;
+	position: relative;
+	margin: 1.5rem 0;
+	max-width: min(100%, 500px);
+	max-height: min(50vh, 500px);
+	overflow: hidden;
+	border-radius: 2rem;
+}
+	.image-card img {
+		width: 100%;
+		height: auto;
+		vertical-align: top;
+			-webkit-transform: object-fit 0.5s;
+			-moz-transform: object-fit 0.5s;
+			-o-transform: object-fit 0.5s;
+			-ms-transform: object-fit 0.5s;
+			-khtml-transform: object-fit 0.5s;
+		transform: object-fit 0.5s;
+			-webkit-object-fit: cover;
+			-moz-object-fit: cover;
+			-o-object-fit: cover;
+			-ms-object-fit: cover;
+			-khtml-object-fit: cover;
+		object-fit: cover;
+	}
+		.image-card:hover img {
+				-webkit-transform: object-fit 0.5s;
+				-moz-transform: object-fit 0.5s;
+				-o-transform: object-fit 0.5s;
+				-ms-transform: object-fit 0.5s;
+				-khtml-transform: object-fit 0.5s;
+			transform: object-fit 0.5s;
+				-webkit-object-fit: contain;
+				-moz-object-fit: contain;
+				-o-object-fit: contain;
+				-ms-object-fit: contain;
+				-khtml-object-fit: contain;
+			object-fit: contain;
+		}
+	.image-card.wide {
+		width: 100%;
+		max-width: 100%;
+		max-height: min(75vh, 1000px);
+	}
+	.image-card.full {
+		margin-left: -1rem;
+		width: 100vw;
+		max-width: 100vw;
+		max-height: 100vh;
+		border-radius: 0;
+	}
+	.image-card figcaption {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		min-height: 4.75rem;
+		padding: 1.75rem 1rem 0.75rem 1rem;
+		font-size: 0.75rem;
+		color: var(--white);
+		background: linear-gradient(to top, var(--purple-60) 0%, var(--purple-60) 75%, var(--purple-30) 75%, var(--purple-30) 90%, var(--purple-30) 95%, rgba(0, 0, 0, 0) 100%);
+	}
+		.image-card figcaption a {
+			margin: 0 0.25rem;
+		}
+
+/* Bookmarks */
+.bookmark-card {
+	margin: 2rem 0;
+}
+	.bookmark-card:hover {
+		border: 5px solid var(--pink);
+	}
+	.bookmark-card:active {
+		border: 1px solid var(--purple);
+	}
+.bookmark-card {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	width: 100%;
+	border: 3px solid var(--purple-lighter);
+	border-radius: 1.5rem;
+	color: var(--eggplant);
+	text-decoration: none;
+}
+	.bookmark-card .bookmark-content {
+		flex: 1.5;
+		padding: 1rem;
+		overflow: hidden;
+		order: 2;
+	}
+		.bookmark-card .bookmark-content .bookmark-title {
+			display: block;
+			margin-bottom: 0.5rem;
+			font-weight: bold;
+			color: var(--purple);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.bookmark-card .bookmark-content .bookmark-description {
+			display: block;
+			overflow: hidden;
+			margin-bottom: 1rem;
+			font-size: 0.9rem;
+		}
+		.bookmark-card .bookmark-content .bookmark-metadata {
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-size: 0.75rem;
+		}
+			.bookmark-card .bookmark-content .bookmark-metadata .bookmark-icon {
+				width: 20px;
+				height: 20px;
+				margin-right: 0.5rem;
+				border-radius: 0;
+			}
+			.bookmark-card .bookmark-content .bookmark-metadata p {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: flex-start;
+				margin: 0;
+			}
+	.bookmark-card .bookmark-thumbnail {
+		flex: 1;
+		border-bottom: 3px dotted var(--purple-lighter);
+		order: 1;
+	}
+		.bookmark-card .bookmark-thumbnail img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	.bookmark-author, .bookmark-publisher {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+/* Embeds */
+.embed-card {
+	margin: 2rem 0;
+}
+    .embed-card iframe {
+		width: 100%;
+        max-width: 600px;
+        height: auto;
+        max-height: 450px;
+        aspect-ratio: 3/4;
+    }
+    .embed-card figcaption {
+        width: 100%;
+        max-width: 600px;
+        min-height: 4.75rem;
+        padding: 1rem;
+        font-size: .75rem;
+        color: var(--white);
+        background-color: var(--purple);
+        text-align: center;
+        margin-top: -0.5rem;
+    }
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+	.image-card, .embed-card {
+		max-height: min(75vh, 500px);
+	}
+		.image-card.full {
+			margin-left: -6rem;
+		}
+	
+	.bookmark-card {
+		flex-direction: row;
+	}
+		.bookmark-card .bookmark-content {
+			order: 1;
+		}
+	.bookmark-card .bookmark-thumbnail {
+		flex: 1;
+		order: 2;
+		border-bottom: initial;
+		border-left: 3px dotted var(--purple-lighter);
+	}
+}
+@media only screen and (min-width: 1024px ) {
+	.image-card, .embed-card {
+		max-width: min(50%, 500px);
+		max-height: min(75vh, 1000px);
+	}
+		.image-card.wide {
+			max-height: min(75vh, 1000px);
+		}
+		.image-card.full {
+			margin-left: -5.5rem;
+		}
+}
+@media only screen and (min-width: 1440px) {
+	.image-card, .embed-card {
+		max-width: min(50%, 1000px);
+		max-height: min(75vh, 1000px);
+	}
+		.image-card.wide {
+			max-height: min(75vh, 1000px);
+		}
+	.image-card.full {
+		margin-left: -12rem;
+	}
+}
+@media only screen and (min-width: 2560px) {
+	.image-card.full {
+		margin-left: -10.5rem;
+	}
+}

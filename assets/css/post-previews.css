@@ -55,6 +55,37 @@
 						transform: scale(1.05);
 						transition: transform 1s, object-position 2s;
 					}
+				.post-previews .post-preview .tag-flag {
+					position: absolute;
+					bottom: 0rem;
+					left: -0.5rem;
+					width: 10rem;
+					transform: rotateZ(-8deg);
+					transition: transform 0.5s, left 0.25s;
+				}
+					.post-previews .post-preview a:hover .tag-flag {
+						transform: rotateZ(-12deg) scale(1.0125);
+						transition: transform 1s;
+					}
+					.post-previews .post-preview a:active .tag-flag {
+						transform: rotateZ(-12deg) scale(1.1);
+						transition: transform 1s;
+					}
+
+					.post-previews .post-preview .tag-flag p {
+						position: absolute;
+						top: 0.85rem;
+						left: 0.5rem;
+						width: 5rem;
+						margin: 0;
+						text-align: center;
+						font-family: var(--font-accent);
+						color: var(--white);
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						font-size: 0.65rem;
+					}
 			.post-previews .post-preview a .post-preview-body {
 				margin-top: -0.5rem;
 				padding: 0.75rem 1rem 1.25rem 1rem;
@@ -142,6 +173,16 @@
 						transform: scale(1.15);
 						transition: transform 0.5s;
 					}
+				.post-previews.compact .post-preview .tag-flag {
+					top: -1.5rem;
+					left: -0.5rem;
+					width: 10rem;
+				}
+					.post-previews.compact .post-preview a:hover .tag-flag {
+						left: -1.5rem;
+						transform: rotate(-12deg) scale(0.85);
+						transition: transform .5s, left 0.5s;
+					}
 			.post-previews.compacted .post-preview a .post-preview-body {
 				display: flex;
 				flex-direction: column;
@@ -225,6 +266,10 @@
 			width: 100px;
 			height: 75px;
 		}
+		.post-previews.compact .post-preview a:hover .tag-flag {
+			left: -1.5rem;
+			transform: rotate(-12deg) scale(0.8);
+		}
 }
 @media only screen and (min-width: 2560px) {
 	.post-previews .post-preview,
@@ -237,5 +282,8 @@
 		.post-previews.compacted .post-preview a .post-preview-header .bg-img {
 			width: 200px;
 			height: 150px;
+		}
+		.post-previews.compact .post-preview a:hover .tag-flag {
+			left: -1.75rem;
 		}
 }

@@ -180,17 +180,21 @@
 							transform: scale(0.875);
 						    transition: color 0.5s, transform 0.5s, opacity 0.5s;
 						}
-					#nav-menu > ul > li.current > a, #nav-menu > ul > li.current > a:visited {
+					#nav-menu > ul > li.current-page > a, #nav-menu > ul > li.current-page > a:visited {
 						color: var(--purple-lightest);
 						text-decoration: underline dashed;
 						pointer-events: none;
 					}
-						#nav-menu > ul > li.current > a:hover, #nav-menu > ul > li.current > a:active {
+						#nav-menu > ul > li.current-page > a:hover, #nav-menu > ul > li.current-page > a:active {
 							color: var(--purple-lightest);
 							opacity: 1;
+								-webkit-transform: scale(1);
+								-moz-transform: scale(1);
+								-o-transform: scale(1);
+								-ms-transform: scale(1);
+								-khtml-transform: scale(1);
 							transform: scale(1);
 							cursor: pointer;
-							pointer-events: none;
 						}
 /* Animations */
 @keyframes open-hamburger-nav-menu {

@@ -1,7 +1,7 @@
 /* Footer Shooting stars! */
 const siteFooter = document.getElementById('site-footer');
 if (siteFooter) {
-	const bodyContents = document.getElementById('main-content').querySelector('.body-contents')
+	const bodyContents = document.getElementById('main-content').querySelector('.main-body')
 	const bodyContentsStyle = window.getComputedStyle(bodyContents);
 
 	const footerShootingStarsCanvas = document.createElement("canvas");
@@ -125,7 +125,7 @@ if (siteFooter) {
 	// Responsiveness handling
 	window.addEventListener('resize', function resizeFooterCanvas(e) {
 		const changedFooterRef = document.getElementById('site-footer');
-		const changedBody = document.getElementById('main-content').querySelector('.body-contents')
+		const changedBody = document.getElementById('main-content').querySelector('.main-body')
 		const bodyStyle = window.getComputedStyle(changedBody);
 
 		footerShootingStarsCanvas.width = changedFooterRef.offsetWidth;

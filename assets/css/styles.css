@@ -2,5 +2,7 @@
 @import "base-elements.css";
 @import "nav-menu.css";
 @import "site-footer.css";
+@import "page-content.css";
+/*@import "post-components.css";*/
 @import "post-previews.css";
 @impoty "utility-elements.css";

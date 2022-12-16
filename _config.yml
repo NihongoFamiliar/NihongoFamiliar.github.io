@@ -20,7 +20,7 @@ collections:
   tags:
     output: false
   authors:
-    output: true
+    output: false
 
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########

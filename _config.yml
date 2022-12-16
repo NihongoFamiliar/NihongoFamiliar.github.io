@@ -16,6 +16,10 @@ twitter_username: "NihongoFamiliar"
 #youtube_username: username
 #googleplus_username: +username
 
+collections:
+  - tags
+  - authors
+
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################

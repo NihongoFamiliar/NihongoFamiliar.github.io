@@ -11,12 +11,17 @@
 	background-position: center;
 }
 	#hero:not(figure) {
+		--side-pad-compensator: 1rem;
+		position: relative;
+		top: initial; left: initial; right: initial;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		height: initial;
 		min-height: 50vh;
+		margin-left: calc(var(--side-pad-compensator) * -1);
+		width: calc(100vw - (100vw - 100%) + (var(--side-pad-compensator) * 2));
 	}
 		#hero:not(figure) figure {
 			position: absolute;
@@ -102,6 +107,9 @@ main > .main-body > article > header {
 	position: relative;
 	margin-top: calc(50vh + 1rem);
 }
+	main > .main-body > article > #hero:not(figure) + header {
+		margin-top: 1rem;
+	}
 
 /* Page Body */
 main {
@@ -188,6 +196,9 @@ main > .main-body > article > footer .footer-content {
 
 /* Media Queries */
 @media only screen and (min-width: 768px) {
+	#hero:not(figure) {
+		--side-pad-compensator: 6rem;
+	}
 	main > .main-body {
 		padding: 2rem 6rem 3rem 6rem;
 		background-size: 5rem;
@@ -226,6 +237,9 @@ main > .main-body > article > footer .footer-content {
 		}
 }
 @media only screen and (min-width: 1024px ) {
+	#hero:not(figure) {
+		--side-pad-compensator: 5.5rem;
+	}
 	main > .main-body {
 		padding: 3rem 5.5rem 3rem 5.5rem;
 		background-size: 4rem;
@@ -236,6 +250,9 @@ main > .main-body > article > footer .footer-content {
 	}
 }
 @media only screen and (min-width: 1440px) {
+	#hero:not(figure) {
+		--side-pad-compensator: 12rem;
+	}
 	main > .main-body {
 		padding: 3rem 12rem 3rem 12rem;
 		background-size: 9rem;
@@ -246,6 +263,9 @@ main > .main-body > article > footer .footer-content {
 	}
 }
 @media only screen and (min-width: 2560px) {
+	#hero:not(figure) {
+		--side-pad-compensator: 10.5rem;
+	}
 	main > .main-body {
 		padding: 3rem 10.5rem 3rem 10.5rem;
 		background-size: 8rem;

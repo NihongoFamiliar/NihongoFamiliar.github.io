@@ -11,15 +11,12 @@
 	background-position: center;
 }
 	#hero:not(figure) {
-		position: relative;
-		top: initial; left: initial; right: initial;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		height: initial;
 		min-height: 50vh;
-		margin-top: -1rem;
 	}
 		#hero:not(figure) figure {
 			position: absolute;

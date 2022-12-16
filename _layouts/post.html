@@ -31,7 +31,7 @@ layout: default
 		{% for author in site.authors %}
 		{% if author.slug == page.author %}
 			<div class="article-author" aria-label="This insight is by {{author.name}}">
-				<img aria-hidden="true" alt="{{name}}'s avatar" src="{{profile_image}}" /> {{author.name}}
+				<img aria-hidden="true" alt="{{author.name}}'s avatar" src="{{author.icon_src}}" /> {{author.name}}
 			</div>
 		{% endif %}
 		{% endfor %}

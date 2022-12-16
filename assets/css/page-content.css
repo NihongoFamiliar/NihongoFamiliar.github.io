@@ -217,11 +217,24 @@ main > .main-body > article > footer .footer-content {
 	}
 		.article-title-divider { margin-bottom: 3rem; }
 		.article-footer-divider { margin-top: 3rem; }
+	
+	#hero .author-description {
+		padding: 2rem 2rem 4rem 2rem;
+	}
+		#hero .icon {
+			width: 150px;
+			height: 150px;
+			border: 5px dashed var(--white);
+		}
 }
 @media only screen and (min-width: 1024px ) {
 	main > .main-body {
 		padding: 3rem 5.5rem 3rem 5.5rem;
 		background-size: 4rem;
+	}
+	
+	#hero .author-description {
+		padding: 2rem 4rem 4rem 4rem;
 	}
 }
 @media only screen and (min-width: 1440px) {
@@ -229,10 +242,18 @@ main > .main-body > article > footer .footer-content {
 		padding: 3rem 12rem 3rem 12rem;
 		background-size: 9rem;
 	}
+	
+	#hero .author-description {
+		padding: 2rem 10rem 4rem 10rem;
+	}
 }
 @media only screen and (min-width: 2560px) {
 	main > .main-body {
 		padding: 3rem 10.5rem 3rem 10.5rem;
 		background-size: 8rem;
+	}
+	
+	#hero .author-description {
+		padding: 2rem 15rem 4rem 15rem;
 	}
 }

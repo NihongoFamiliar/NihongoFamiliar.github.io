@@ -32,4 +32,12 @@
       {% if post.subtitle %}<p class="description">{{post.subtitle | truncatewords:25}}...</p>{% endif %}
     </footer>
   </a>
+	<p>PAGE TAGS</p>
+	{% for tag in post.tags %}
+		<p>{{tag}}</p>
+	{% endfor %}
+	<p>SITE TAGS</p>
+	{% for tag in site.tags %}
+		<p>{{tag.name}}</p>
+	{% endfor %}
 </li>

@@ -18,7 +18,7 @@
 		</svg>
 		{% if post.tags and post.tags.size and post.tags[0] %}
 			{% for tag in site.tags %}
-			{% if tag.id == post.tags[0] %}
+			{% if tag.slug == post.tags[0] %}
 				<p>{{tag.name}}</p>
 			{% endif %}
 			{% endfor %}
@@ -32,13 +32,4 @@
       {% if post.subtitle %}<p class="description">{{post.subtitle | truncatewords:25}}...</p>{% endif %}
     </footer>
   </a>
-	<p>PAGE TAGS</p>
-	<p>GOAL: {{ post.tags[0] }}</p>
-	{% for tag in post.tags %}
-		<p>{{tag}}</p>
-	{% endfor %}
-	<p>SITE TAGS</p>
-	{% for tag in site.tags %}
-		<p>{{ tag.slug }} => {{tag.name}}</p>
-	{% endfor %}
 </li>

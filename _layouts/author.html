@@ -3,57 +3,57 @@ layout: default
 ---
 
 <div id="hero">
-  <figure aria-hidden="true">
-  {% if page.hero_src %}
-    <img src={{page.hero_src}}>
-  {% else %}
-    <img src="/assets/images/foundation/default-hero.png">
-  {% endif %}
-  </figure>
-  <div class="author-description">
-			<img aria-hidden="true" class="icon" alt="{{page.name}}'s avatar'" src="{{page.icon_src}}" />
-			<p class="name">{{page.name}}</p>
-			<p class="post-count">
-        {% assign posts_by_author = site.posts | where: "author", page.slug %}
-        {% if posts_by_author.size = 0 %}
-          No insights made yet.
-        {% else %}
-          Insight count: {{posts_by_author.size}}
-        {% endif%}
-			</p>
-			<p class="bio">{{page.description}}</p>
-			<ul class="socials">
-				{{% if page.website_url %}}
-					<li class="social">
-						<a title="Press to view {{page.name}}'s website" aria-label="Press to view {{page.name}}'s website." href="{{page.website_url}}" target="_blank">
-							Website
-						</a>
-					</li>
-				{{% endif %}}
-				{{% if page.twitter_url %}}
-					<li class="social">
-						<a title="Press to view {{page.name}}'s Twitter." aria-label="Press to view {{page.name}}'s Twitter." href="{{page.twitter_url}}" target="_blank">
-							Twitter
-						</a>
-					</li>
-				{{% endif %}}
-				{{% if page.facebook_url %}}
-					<li class="social">
-						<a title="Press to view {{page.name}}'s Facebook." aria-label="Press to view {{page.name}}'s Facebook." href="{{page.facebook_url}}" target="_blank">
-							Facebook
-						</a>
-					</li>
-				{{% endif %}}
-			</ul>
-		</div>
+	<figure aria-hidden="true">
+	{% if page.hero_src %}
+		<img src={{page.hero_src}}>
+	{% else %}
+		<img src="/assets/images/foundation/default-hero.png">
+	{% endif %}
+	</figure>
+	<div class="author-description">
+		<img aria-hidden="true" class="icon" alt="{{page.name}}'s avatar" src="{{page.icon_src}}" />
+		<p class="name">{{page.name}}</p>
+		<p class="post-count">
+			{% assign posts_by_author = site.posts | where: "author", page.slug %}
+			{% if posts_by_author.size = 0 %}
+			  No insights made yet.
+			{% else %}
+			  Insight count: {{posts_by_author.size}}
+			{% endif%}
+		</p>
+		<p class="bio">{{page.description}}</p>
+		<ul class="socials">
+			{{% if page.website_url %}}
+				<li class="social">
+					<a title="Press to view {{page.name}}'s website" aria-label="Press to view {{page.name}}'s website." href="{{page.website_url}}" target="_blank">
+						Website
+					</a>
+				</li>
+			{{% endif %}}
+			{{% if page.twitter_url %}}
+				<li class="social">
+					<a title="Press to view {{page.name}}'s Twitter." aria-label="Press to view {{page.name}}'s Twitter." href="{{page.twitter_url}}" target="_blank">
+						Twitter
+					</a>
+				</li>
+			{{% endif %}}
+			{{% if page.facebook_url %}}
+				<li class="social">
+					<a title="Press to view {{page.name}}'s Facebook." aria-label="Press to view {{page.name}}'s Facebook." href="{{page.facebook_url}}" target="_blank">
+						Facebook
+					</a>
+				</li>
+			{{% endif %}}
+		</ul>
+	</div>
 </div>
 
 {% if page.title or page.subtitle %}
 <header class="title">
-    <h1>
-      {% if page.title %}{{page.title}}{% endif %}
-      {% if page.subtitle %}<small>{{page.subtitle}}</small>{% endif %}
-    </h1>
+	<h1>
+		{% if page.title %}{{page.title}}{% endif %}
+		{% if page.subtitle %}<small>{{page.subtitle}}</small>{% endif %}
+	</h1>
 	<hr class="article-title-divider" />
 </header>
 {% endif %}

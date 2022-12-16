@@ -1,0 +1,38 @@
+---
+slug: "bane"
+name: "The Nihongo Familiar"
+hero_src: "assets/images/foundation/author-bane_hero.png"
+icon: "assets/images/foundation/author-bane.jpg"
+description: "A skill-hoarder who wants to fill the language learning adventure with fun, intrigue, & cute mascots. In their free-time, rock climbing & tea are enjoyed. Expect articles, apps, arts, & awesome."
+---
+
+<h2>Shoutouts to my homies!</h2>
+<p>
+  This is to the creatives & other helpful people who've contributed something substantial to Nihongo Familiar, but cannot be credited directly where their work shines. Go show some love for the people who add nice things to this world! ~<em>Thank you!</em>
+</p>
+</br>
+<dl>
+  <dt>
+    <a href="https://spacewusky.carrd.co/" title="Ajahli Beninati's web portal">Ajahli Beninati</a>
+  </dt>
+  <dd>The lovely, all-around-wonderful artist that drew my icon!</dd>
+
+  <dt>Bane, you didn't credit <strong>X</strong> source for Y thing-- <em>Stop this madness!</em></dt>
+  <dd><em>For realsies?</em> I don't like that. Please hit me up so I can fix this proper!</dd>
+</dl>
+<br/><br/><br/>
+
+<h2>Most recent insights</h2>
+<ul class="post-previews">
+{% if site.posts.size > 0 %}
+  {% assign filtered_posts = site.posts | where: 'author', page.slug %}
+  {% for post in filtered_posts limit:3 %}
+    {% include postcard.html %}
+  {% endfor %}
+{% else %}
+  <li><p>Uh-oh! There are no posts here yet.</p></li>
+{% endif %}
+</ul>
+<p><a title="Click to view other insights" href="/insights/">View other insights...</a></p>
+<br />
+<br />

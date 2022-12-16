@@ -28,7 +28,7 @@ hero_src: "/assets/images/foundation/default-hero-white.png"
 
 
 <h2>Latest Insights</h2>
-<ul class="post-previews compacted minimized">
+<ul class="post-previews compacted">
 {% if site.posts.size > 0 %}
   {% for post in site.posts limit:6 %}
     {% include postcard.html %}
@@ -37,7 +37,7 @@ hero_src: "/assets/images/foundation/default-hero-white.png"
   <li><p>Uh-oh! There are no posts here yet.</p></li>
 {% endif %}
 </ul>
-<!-- <p><a title="Click to view more insights" href="{{@site.url}}/insights/">View More Insights...</a></p> -->
+<p><a title="Click to view more insights" href="/insights/">View More Insights...</a></p>
 <br />
 <br />
 

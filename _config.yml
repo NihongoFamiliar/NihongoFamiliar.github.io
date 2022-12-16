@@ -17,7 +17,8 @@ twitter_username: "NihongoFamiliar"
 #googleplus_username: +username
 
 collections:
-  - tags
+  tags:
+    output: false
   authors:
     output: true
 

@@ -147,7 +147,7 @@ if (heroSection) {
 	heroStarsCanvas.height = heroSection.offsetHeight;
 	const heroStarsCtx = heroStarsCanvas.getContext('2d');
 
-	heroSection.insertAdjacentElement('afterbegin', heroStarsCanvas);
+	heroSection.insertAdjacentElement('beforeend', heroStarsCanvas);
 
 	const heroVeilStars = [];
 	const heroShootingStars = [];

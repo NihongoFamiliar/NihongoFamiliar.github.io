@@ -23,27 +23,27 @@ layout: default
 		</p>
 		<p class="bio">{{page.description}}</p>
 		<ul class="socials">
-			{{% if page.website_url %}}
+			{% if page.website_url %}
 				<li class="social">
 					<a title="Press to view {{page.name}}'s website" aria-label="Press to view {{page.name}}'s website." href="{{page.website_url}}" target="_blank">
 						Website
 					</a>
 				</li>
-			{{% endif %}}
-			{{% if page.twitter_url %}}
+			{% endif %}}
+			{% if page.twitter_url %}
 				<li class="social">
 					<a title="Press to view {{page.name}}'s Twitter." aria-label="Press to view {{page.name}}'s Twitter." href="{{page.twitter_url}}" target="_blank">
 						Twitter
 					</a>
 				</li>
-			{{% endif %}}
-			{{% if page.facebook_url %}}
+			{% endif %}
+			{% if page.facebook_url %}
 				<li class="social">
 					<a title="Press to view {{page.name}}'s Facebook." aria-label="Press to view {{page.name}}'s Facebook." href="{{page.facebook_url}}" target="_blank">
 						Facebook
 					</a>
 				</li>
-			{{% endif %}}
+			{% endif %}
 		</ul>
 	</div>
 </div>

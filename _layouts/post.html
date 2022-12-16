@@ -30,9 +30,9 @@ layout: default
 	<div class="footer-content">
 		{% for author in site.authors %}
 		{% if author.slug == page.author %}
-			<div class="article-author" aria-label="This insight is by {{author.name}}">
+			<a class="article-author" title="Press to view {{author.name}}'s author page" aria-label="Press to view {{author.name}}'s author page" href="{{author.permalink}}">
 				<img aria-hidden="true" alt="{{author.name}}'s avatar" src="{{author.icon_src}}" /> {{author.name}}
-			</div>
+			</a>
 		{% endif %}
 		{% endfor %}
 	

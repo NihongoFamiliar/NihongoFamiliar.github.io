@@ -18,7 +18,8 @@ twitter_username: "NihongoFamiliar"
 
 collections:
   - tags
-  - authors
+  authors:
+    output: true
 
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########

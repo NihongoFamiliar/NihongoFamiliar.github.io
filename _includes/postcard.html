@@ -33,6 +33,7 @@
     </footer>
   </a>
 	<p>PAGE TAGS</p>
+	<p>GOAL: {{ post.tags[0] }}</p>
 	{% for tag in post.tags %}
 		<p>{{tag}}</p>
 	{% endfor %}

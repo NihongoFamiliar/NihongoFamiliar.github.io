@@ -15,7 +15,7 @@ layout: default
 		<p class="name">{{page.name}}</p>
 		<p class="post-count">
 			{% assign posts_by_author = site.posts | where: "author", page.slug %}
-			{% if posts_by_author.size = 0 %}
+			{% if posts_by_author.size == 0 %}
 			  No insights made yet.
 			{% else %}
 			  Insight count: {{posts_by_author.size}}

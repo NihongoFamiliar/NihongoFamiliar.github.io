@@ -28,6 +28,14 @@ layout: default
 	<hr class="article-footer-divider" />
 	
 	<div class="footer-content">
+		{% for author in site.authors %}
+		{% if author.slug == page.author %}
+			<div class="article-author" aria-label="This insight is by {{author.name}}">
+				<img aria-hidden="true" alt="{{name}}'s avatar" src="{{profile_image}}" /> {{author.name}}
+			</div>
+		{% endif %}
+		{% endfor %}
+	
 		<p class="article-date">
 			Published on {{page.date | date_to_long_string}}.
 		</p>

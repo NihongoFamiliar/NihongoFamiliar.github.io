@@ -17,6 +17,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		height: initial;
+		min-height: 50vh;
 		margin-top: -1rem;
 	}
 		#hero:not(figure) figure {
@@ -39,12 +41,13 @@
 }
 /* Author hero */
 #hero .author-description {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	min-height: 50vh;
+	height: 100%;
 	padding: 2rem 1rem 4rem 1rem;
 	background-color: var(--eggplant-60);
 	color: var(--white);
@@ -67,6 +70,7 @@
 	#hero .icon {
 		width: 100px;
 		height: 100px;
+		margin-top: 5rem;
 		margin-bottom: 1rem;
 		border: 5px dashed var(--white);
 		border-radius: 100%;

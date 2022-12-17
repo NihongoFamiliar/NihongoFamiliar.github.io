@@ -103,11 +103,8 @@
 /* Page Header */
 main > .main-body > article > header {
 	position: relative;
-	margin-top: calc(50vh + 1rem);
+	margin-top: 1rem;
 }
-	main > .main-body > article > #hero:not(figure) + header {
-		margin-top: 1rem;
-	}
 
 /* Page Body */
 main {

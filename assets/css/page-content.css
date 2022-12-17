@@ -3,11 +3,8 @@
 ########################### */
 /* Hero */
 #hero {
-	position: relative;
-	height: 50vh;
-	background-size: cover;
-	background-position: center;
 	--side-pad-compensator: 1rem;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -15,6 +12,9 @@
 	margin-top: -1rem;
 	margin-left: calc(var(--side-pad-compensator) * -1);
 	width: calc(100vw - (100vw - 100%) + (var(--side-pad-compensator) * 2));
+	height: 50vh;
+	background-size: cover;
+	background-position: center;
 }
 	#hero:not(figure) {
 		height: initial;

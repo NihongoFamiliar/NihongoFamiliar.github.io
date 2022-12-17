@@ -48,16 +48,6 @@ layout: default
 	</div>
 </div>
 
-{% if page.title or page.subtitle %}
-<header class="title">
-	<h1>
-		{% if page.title %}{{page.title}}{% endif %}
-		{% if page.subtitle %}<small>{{page.subtitle}}</small>{% endif %}
-	</h1>
-	<hr class="article-title-divider" />
-</header>
-{% endif %}
-
 <div>{{content}}</div>
 
 <footer>

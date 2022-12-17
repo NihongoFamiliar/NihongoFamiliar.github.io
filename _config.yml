@@ -1,20 +1,12 @@
+# Meta deets
+url: "https://www.nihongo-familiar.com"
 title: "Nihongo Familiar"
 author: "The Nihongo Familiar"
 description: "Projects, stories, & ideas to help make learning the Japanese language a more cute, fun, and chill experience for all of us~!"
-# ^^^ This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 
-# Email / Social media user names used by the minima theme:
-# All of these are optional and can be removed or commented out
+# Social deets
 #email: "example@mail.com"
 twitter_username: "NihongoFamiliar"
-#github_username: "githubuser"
-#linkedin_username: "linkedinuser"
-#facebook_username: username
-#flickr_username: username
-#instagram_username: username
-#pinterest_username: username
-#youtube_username: username
-#googleplus_username: +username
 
 collections:
   tags:

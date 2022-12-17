@@ -121,7 +121,7 @@ main {
 }
 	main > .main-body {
 		position: relative;
-		padding: 1rem 1rem 3rem 1rem;
+		padding: 0 1rem 3rem 1rem;
 		min-height: 50vh;
 		background-color: var(--white);
 		background-image: url('/assets/images/foundation/stars-bg.svg');
@@ -201,7 +201,7 @@ main > .main-body > article > footer .footer-content {
 		--side-pad-compensator: 6rem;
 	}
 	main > .main-body {
-		padding: 2rem 6rem 3rem 6rem;
+		padding: 0 6rem 3rem 6rem;
 		background-size: 5rem;
 	}
 	main > .main-body > article {
@@ -242,7 +242,7 @@ main > .main-body > article > footer .footer-content {
 		--side-pad-compensator: 5.5rem;
 	}
 	main > .main-body {
-		padding: 3rem 5.5rem 3rem 5.5rem;
+		padding: 0 5.5rem 3rem 5.5rem;
 		background-size: 4rem;
 	}
 	
@@ -255,7 +255,7 @@ main > .main-body > article > footer .footer-content {
 		--side-pad-compensator: 12rem;
 	}
 	main > .main-body {
-		padding: 3rem 12rem 3rem 12rem;
+		padding: 0 12rem 3rem 12rem;
 		background-size: 9rem;
 	}
 	
@@ -268,7 +268,7 @@ main > .main-body > article > footer .footer-content {
 		--side-pad-compensator: 10.5rem;
 	}
 	main > .main-body {
-		padding: 3rem 10.5rem 3rem 10.5rem;
+		padding: 0 10.5rem 3rem 10.5rem;
 		background-size: 8rem;
 	}
 	

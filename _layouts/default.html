@@ -11,8 +11,14 @@
 	{%- endif -%}
 
 	<!-- Site details -->
-	<title>{{ page.title | default: "Nihongo Familiar" }}</title>
-	<meta name="description" content={{ page.subtitle | page.description | default: "Projects, stories, & ideas to help make learning the Japanese language a more cute, fun, and chill experience for all of us~!" }} />
+	<title>
+		{% if page.title != "Nihongo Familiar" %}
+			Nihongo Familiar - {{page.title}}
+		{% else %}
+			{{ site.title | default: "Nihongo Familiar" }}
+		{% endif %}
+	</title>
+	<meta name="description" content="Projects, stories, & ideas to help make learning the Japanese language a more cute, fun, and chill experience for all of us~!" />
 	<meta name="keywords" content="Japanese, language learning, languages, cute, fun, baller">
 	<meta name="author" content="The Nihongo Familiar" />
 

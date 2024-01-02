@@ -7,7 +7,7 @@
 	position: relative;
 	margin: 1.5rem 0;
 	max-width: min(100%, 500px);
-	max-height: min(50vh, 500px);
+ 	/*max-height: min(50vh, 500px);*/
 	overflow: hidden;
 	border-radius: 2rem;
 }
@@ -45,13 +45,13 @@
 	.image-card.wide {
 		width: 100%;
 		max-width: 100%;
-		max-height: min(75vh, 1000px);
+		/*max-height: min(75vh, 1000px);*/
 	}
 	.image-card.full {
 		margin-left: -1rem;
 		width: 100vw;
 		max-width: 100vw;
-		max-height: 100vh;
+		/*max-height: 100vh;*/
 		border-radius: 0;
 	}
 	.image-card figcaption {
@@ -175,7 +175,7 @@
 
 /* Media Queries */
 @media only screen and (min-width: 768px) {
-	.image-card, .embed-card {
+	/*.image-card, */.embed-card {
 		max-height: min(75vh, 500px);
 	}
 		.image-card.full {
@@ -196,7 +196,7 @@
 	}
 }
 @media only screen and (min-width: 1024px ) {
-	.image-card, .embed-card {
+	/*.image-card, */.embed-card {
 		max-width: min(50%, 500px);
 		max-height: min(75vh, 1000px);
 	}
@@ -208,7 +208,7 @@
 		}
 }
 @media only screen and (min-width: 1440px) {
-	.image-card, .embed-card {
+	/*.image-card, */.embed-card {
 		max-width: min(50%, 1000px);
 		max-height: min(75vh, 1000px);
 	}
